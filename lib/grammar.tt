@@ -97,7 +97,7 @@ grammar KeepAChangelog
   end
 
   rule release_url
-    'https://' [a-z.]+ '/' (!'/' .)+ '/' (!'/' .)+ '/compare/' diff_version '...' diff_version
+    'https://' [a-z.]+ '/' (!'/' .)+ '/' (!'/' .)+ '/' (!'/' .)+ '/compare/' diff_version '...' diff_version
   end
 
   rule diff_version
