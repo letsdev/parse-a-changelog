@@ -2,4 +2,4 @@
 
 set -eux
 
-docker build . --tag parse-a-changelog
+docker build . --tag docker-intern.letsdev.de/devops/parse-a-changelog
