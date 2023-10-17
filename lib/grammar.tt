@@ -89,7 +89,7 @@ grammar KeepAChangelog
   end
 
   rule initial_release
-    '[' release_version ']: ' 'https://' [a-z.]+ '/' (!'/' .)+ '/' (!'/' .)+ '/' (!'/' .)+ tags release_version new_line
+    '[' release_version ']: ' 'https://' [a-z.]+ '/' (!('/releases/tag' / '/tags/v' / '/tags/') .)* tags release_version new_line
   end
 
   rule tags
@@ -101,7 +101,7 @@ grammar KeepAChangelog
   end
 
   rule release_url
-    'https://' [a-z.]+ '/' (!'/' .)+ '/' (!'/' .)+ '/' (!'/' .)+ '/compare/' diff_version '...' diff_version
+    'https://' [a-z.]+ '/' (!'/compare/' .)+ '/compare/' diff_version '...' diff_version
   end
 
   rule diff_version
